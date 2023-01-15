@@ -5,7 +5,10 @@ Check the data type of each variable
 
 // Answer
 
-	console.log(typeof "alive");
-	console.log(typeof 3);
-	console.log(typeof true);
+	const status = "alive";
+	const num = 3;
+	const boo = true;
+	console.log(typeof status);
+	console.log(typeof num);
+	console.log(typeof boo);
 	
