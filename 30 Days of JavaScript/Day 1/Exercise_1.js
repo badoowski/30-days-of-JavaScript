@@ -84,6 +84,6 @@ console.
  let myAge = 5;
  let yourAge = 6;
  
- console.log("I am " + myAge +" years old");
- console.log("You are " + yourAge +" years old");
+ console.log(`I am ` + myAge +` years old`);
+ console.log(`You are ` + yourAge +` years old`);
   
