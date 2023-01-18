@@ -34,9 +34,9 @@ Question 3: Check if typeof '10' is exactly equal to 10. If not make it exactly 
 
 // Answer
 
-let a = "10", b = 10;
+const a = "10", b = 10;
 console.log(a===b);
-let c = Number(a);
+const c = Number(a);
 console.log(typeof c);
 console.log(c===b);
 
@@ -47,9 +47,9 @@ Question 4: Check if parseFloat('9.8') is equal to 10 if not make it exactly equ
 
 // Answer
 
-let num = parseFloat('9.8');
+const num = parseFloat('9.8');
 console.log(num===10);
-let rd = Math.round(num);
+const rd = Math.round(num);
 console.log(rd===10);
 
 
@@ -78,8 +78,8 @@ Question 7: Generate a random number between 0 and 100 inclusively.
 
 // Answer
 
-let randomNum = Math.random()         // generates 0 to 0.999
-let numBtnZeroAndHundred = randomNum * 101;
+const randomNum = Math.random()         // generates 0 to 0.999
+const numBtnZeroAndHundred = randomNum * 101;
 console.log(Math.floor(numBtnZeroAndHundred));
 
 
@@ -89,7 +89,7 @@ Question 8: Generate a random number between 50 and 100 inclusively.
 
 // Answer
 
-let numBtnfiftyAndHundred = Math.floor(Math.random() * 51) + 50;
+const numBtnfiftyAndHundred = Math.floor(Math.random() * 51) + 50;
 console.log(numBtnfiftyAndHundred);
 
 
@@ -99,7 +99,7 @@ Question 9: Generate a random number between 0 and 255 inclusively.
 
 // Answer
 
-let numBtn0And255 = randomNum * 256;
+const numBtn0And255 = randomNum * 256;
 console.log(Math.floor(numBtn0And255));
 
 
@@ -109,7 +109,7 @@ Question 10: Access the 'JavaScript' string characters using a random number.
 
 // Answer
 
-let word ="JavaScript";
+const word ="JavaScript";
 console.log(word[Math.floor(Math.random() * word.length)]);
 
 
