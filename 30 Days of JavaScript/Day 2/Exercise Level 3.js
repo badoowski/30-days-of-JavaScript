@@ -44,7 +44,7 @@ Question 4: Calculate the total annual income of the person by extracting the nu
 
 // Answer
 
-let salaryPerMonth = 5000, annualBonus = 10000, onlineCoursesPerMonth = 15000;
-let annualSalary = salaryPerMonth *12, annualOnineCourses = onlineCoursesPerMonth * 12;
-let totalIncome = annualSalary + annualOnineCourses + annualBonus;
+const salaryPerMonth = 5000, annualBonus = 10000, onlineCoursesPerMonth = 15000;
+const annualSalary = salaryPerMonth *12, annualOnineCourses = onlineCoursesPerMonth * 12;
+const totalIncome = annualSalary + annualOnineCourses + annualBonus;
 console.log("The Total Annual Income is " + totalIncome);
