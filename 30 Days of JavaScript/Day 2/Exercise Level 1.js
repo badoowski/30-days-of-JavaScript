@@ -6,7 +6,7 @@ Question 1: Declare a variable named challenge and assign it to an initial value
 
 // Answer
 
-let challenge = "30 Days Of JavaScript";
+const challenge = "30 Days Of JavaScript";
 
 
 /*
@@ -97,7 +97,7 @@ the string at the comma and change it to an array.
 */
 
 // Answer
-let string = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
+const string = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
 console.log(string.split(','));
 /*
 Question 12: Change 30 Days Of JavaScript to 30 Days Of Python using __replace()__ method.
@@ -149,7 +149,7 @@ in the following sentence:__'You cannot end a sentence with because because beca
 
 // Answer
 
-let sentence = 'You cannot end a sentence with because because because is a conjunction';
+const sentence = 'You cannot end a sentence with because because because is a conjunction';
 console.log(sentence.indexOf('because'));
 
 
@@ -180,7 +180,7 @@ Question 20: Use __trim()__ to remove any trailing whitespace at the beginning a
 
 // Answer
 
-let newString = ' 30 Days Of JavaScript ';
+cpnst newString = ' 30 Days Of JavaScript ';
 console.log(newString.trim());
 
 
