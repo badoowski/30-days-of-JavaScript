@@ -17,7 +17,7 @@
 
 // Answer
 let userAge = parseInt(prompt('Enter your age'));
-let lessAge = 18 - userAge;
+const lessAge = 18 - userAge;
 if(userAge >= 18){
    console.log('You are old enough to drive');
 }
@@ -69,8 +69,8 @@ console.log('I am ' + ageDiff + ' years older than you');
 */
 
 // Answer
-let a = 4;
-let b = 3;
+const a = 4;
+const b = 3;
 if (a > b){
     console.log('a is greater than b');
 }else{
