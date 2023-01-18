@@ -163,24 +163,24 @@ console.log('dragon'.includes('on') && 'python'.includes('on'));
 */
 
 // Answer 1
-var now = new Date();
-var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-var yearr = today.getFullYear();
+const now = new Date();
+const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+const yearr = today.getFullYear();
 console.log(yearr);
 // Answer 2
-var month = today.getMonth() + 1;
+const month = today.getMonth() + 1;
 console.log(month);
 // Answer 3
 console.log(now);
 // Answer 4
-var day = today.getDay();
+const day = today.getDay();
 console.log(day);
 // Answer 5
-var hours = now.getHours();
+const hours = now.getHours();
 console.log(hours);
 // Answer 6
-var minutes = now.getMinutes();
+const minutes = now.getMinutes();
 console.log(minutes);
 // Answer 7
-var seconds = now.getTime();
+const seconds = now.getTime();
 console.log(seconds);
