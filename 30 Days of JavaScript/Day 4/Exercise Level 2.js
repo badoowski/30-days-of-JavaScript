@@ -69,7 +69,7 @@ else{
 
 // Answer
 let day = prompt('Enter the day').toLowerCase();
-let dday = day.charAt(0).toUpperCase() + day.slice(1);
+const dday = day.charAt(0).toUpperCase() + day.slice(1);
 if(day==='Monday'.toLowerCase() || day==='Tuesday'.toLowerCase() || day==='Wednesday'.toLowerCase() || day==='Thursday'.toLowerCase() || day==='Friday'.toLowerCase()){
     console.log(dday + ' is a working day');
 }else if(day==='Saturday'.toLowerCase() || day==='Sunday'.toLowerCase()){
