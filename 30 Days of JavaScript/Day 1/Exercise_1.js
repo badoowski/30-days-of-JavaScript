@@ -34,10 +34,10 @@ Question 6: Declare four variables without assigning values
 
 // Answer
 
- let a;
- let b;
- let c;
- let d;
+ const a;
+ const b;
+ const c;
+ const d;
 
 
 /*
@@ -58,11 +58,11 @@ Question 8: Declare variables to store your first name, last name, marital statu
 
 //Answer
 
- let firstName1 = "Rex";
- let lastName1 = "Habib";
- let age1 = 30;
- let country1 = "Nigeria";
- let maritalStatus1 = "Single";
+ const firstName1 = "Rex";
+ const lastName1 = "Habib";
+ const age1 = 30;
+ const country1 = "Nigeria";
+ const maritalStatus1 = "Single";
  
 
 /*
@@ -71,7 +71,7 @@ Question 9: Declare variables to store your first name, last name, marital statu
 
 //Answer
 
- let firstName = "Lekan", lastName = "Salau", age = 10, country = "Canada", maritalStatus = "Married";
+ const firstName = "Lekan", lastName = "Salau", age = 10, country = "Canada", maritalStatus = "Married";
  
 
 /*
@@ -81,8 +81,8 @@ console.
 
 //Answer
 
- let myAge = 5;
- let yourAge = 6;
+ const myAge = 5;
+ const yourAge = 6;
  
  console.log(`I am ` + myAge +` years old`);
  console.log(`You are ` + yourAge +` years old`);
