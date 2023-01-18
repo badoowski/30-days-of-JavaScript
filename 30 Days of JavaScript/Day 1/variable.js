@@ -5,9 +5,9 @@ types
 
 // Answer
 
- let str = "30 days of Javascript";
- let alive = true;
- let firstName;
- let list =  null;
- let age = 30;
+ const str = "30 days of Javascript";
+ const alive = true;
+ const firstName;
+ const list =  null;
+ const age = 30;
 	
