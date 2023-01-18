@@ -76,11 +76,11 @@ const yIntercept = 0;
 */
 
 // Answer
-let y1 = 2;
-let x1 = 2;
-let y2 = 10;
-let x2 = 6;
-let m = (y2 - y1) / (x2 - x1);
+const y1 = 2;
+const x1 = 2;
+const y2 = 10;
+const x2 = 6;
+const m = (y2 - y1) / (x2 - x1);
 console.log(m);
 
 /* 
@@ -97,7 +97,7 @@ console.log(slope===m);
 
 // Answer
 let x = parseInt(prompt('Enter the value of the x'));
-let y = ((x*x) + (6*x) + 9);
+const y = ((x*x) + (6*x) + 9);
 console.log(y);
 // y value is 0 when x value is -3
 
@@ -145,8 +145,8 @@ else {
     ```
 */
 // Answer
-let firstName = 'Asabeneh';
-let lastName = 'Yetayeh';
+const firstName = 'Asabeneh';
+const lastName = 'Yetayeh';
 if (firstName.length > lastName.length){
    console.log('Your first name, ' +firstName + ' is longer than your family name, ' + lastName);
 }
@@ -168,8 +168,8 @@ else{
 */
 
 // Answer
-let myAge = 250;
-let yourAge = 25;
+const myAge = 250;
+const yourAge = 25;
 const ageDiff = myAge - yourAge;
 console.log('I am ' + ageDiff + ' years older than you');
    
@@ -189,8 +189,8 @@ console.log('I am ' + ageDiff + ' years older than you');
 
 // Answer
 let birthYear = parseInt(prompt('Enter your birth year'));
-let userAge = now.getFullYear() - birthYear;
-let lessAge = 18 - userAge;
+const userAge = now.getFullYear() - birthYear;
+const lessAge = 18 - userAge;
 if(userAge >= 18){
    console.log('You are ' + userAge + '. You are old enough to drive');
 }
