@@ -7,7 +7,7 @@ types
 
  const str = "30 days of Javascript";
  const alive = true;
- const firstName;
+ let firstName;
  const list =  null;
  const age = 30;
 	
