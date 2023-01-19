@@ -34,11 +34,12 @@ Question 3: Check if typeof '10' is exactly equal to 10. If not make it exactly 
 
 // Answer
 
-const a = "10", b = 10;
-console.log(a===b);
+const a = "10";
+const b = 10;
+console.log(a === b);
 const c = Number(a);
 console.log(typeof c);
-console.log(c===b);
+console.log(c === b);
 
 
 /*
@@ -48,9 +49,9 @@ Question 4: Check if parseFloat('9.8') is equal to 10 if not make it exactly equ
 // Answer
 
 const num = parseFloat('9.8');
-console.log(num===10);
+console.log(num === 10);
 const rd = Math.round(num);
-console.log(rd===10);
+console.log(rd === 10);
 
 
 /*
@@ -99,8 +100,8 @@ Question 9: Generate a random number between 0 and 255 inclusively.
 
 // Answer
 
-const numBtn0And255 = randomNum * 256;
-console.log(Math.floor(numBtn0And255));
+const numBtnZeroAndTwoFiveFive = randomNum * 256;
+console.log(Math.floor(numBtnZeroAndTwoFiveFive));
 
 
 /*
