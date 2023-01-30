@@ -189,9 +189,9 @@ countries.pop('are north European countries')
 
 // Answer
 /*
-    some: some checks if some of the elements are similar in one aspect and return in boolean.
+    some: some checks if some elements are elements are similar in one aspect and return in boolean.
 
-    every: every checks if all the elements are similar in one aspect and also return in boolean.
+    every: every checks if all elements in an array are similar in all aspects and also return in boolean.
 */
 
 /*
