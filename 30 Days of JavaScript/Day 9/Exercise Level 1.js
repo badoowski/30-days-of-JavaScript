@@ -177,12 +177,15 @@ console.log(sumAll);
 */
 
 // Answer
-countries.unshift('Estonia')
-countries.push('are north European countries')
-const concatString = countries.reduce((acc, cur) =>  `${acc}, ${cur}`);
-console.log(concatString);
-countries.shift('Estonia')
-countries.pop('are north European countries')
+const sentence = countries.reduce(acc, cur, i) => {
+    return i === 0
+  ? acc + 'Estonia, ' + cur + ', '
+  : i === countries.length - 1
+  ? acc + 'and ' + cur + ' are north European countries.'
+  : acc + cur + ', ';
+}, ''};
+
+console.log(sentence);
 /*
     Question 19: Explain the difference between **_some_** and **_every_**
 */
