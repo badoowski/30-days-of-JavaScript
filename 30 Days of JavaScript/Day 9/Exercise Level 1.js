@@ -146,8 +146,9 @@ console.log(startWithE);
 */
 
 // Answer
-const priceWithValue = products.filter((price) => price.price > 0);
-console.log(priceWithValue);
+const productPrice = products.filter(({ price }) => Number(price));
+console.log(productPrice);
+
 
 /*
     Question 16: Declare a function called getStringLists which takes an array as a parameter and then returns
