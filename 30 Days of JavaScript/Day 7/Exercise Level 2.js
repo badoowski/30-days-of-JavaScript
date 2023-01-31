@@ -7,7 +7,7 @@
 
 // Answer 
 
-const solveLinEquation = (a, b, c, x, y) => {
+const solveLinEquation = (a, b, c, x, y) => { // Declaring an array and passing parameters through it
       const linearEquation =  (a*x) + (b*y) + c; // a(x) + b(y) + c
       console.log(linearEquation);
       return linearEquation;
@@ -31,15 +31,15 @@ solveLinEquation(4, 4, 5, 3, 3);
 // Answer
 
 const solveQuadratic = (a, b, c) => {
-    const discriminant = (b ** 2) - 4 * a * c;
+    const discriminant = (b ** 2) - 4 * a * c;  // discriminat from the Quadratic equation formula
     let root1;
     let root2;
-    if(discriminant > 0){
-         root1 = Math.round((-b + Math.sqrt(discriminant)) / (2 * a));
-         root2 = Math.round((-b - Math.sqrt(discriminant)) / (2 * a));
+    if(discriminant > 0){   
+         root1 = Math.round((-b + Math.sqrt(discriminant)) / (2 * a)); // calculation for the first instance when the square root of the discriminant is negative
+         root2 = Math.round((-b - Math.sqrt(discriminant)) / (2 * a)); // calculation for the second instance when the square root of the discriminant is positive
         console.log('The roots of the Quadratic equation are ' + root1 + ' and ' + root2);
     }else if(discriminant == 0){
-        root1 = root2 = Math.round(-b / (2 *a));
+        root1 = root2 = Math.round(-b / (2 *a)); // since the discrimate is zero for both negative and positive instance. the value of both x1 and x2 will be the same
         console.log('The roots of the Quadratic equation are ' + root1 + ' and ' + root2);
     }else{
         let realPart = (-b / (2 *a)).toFixed(2);
@@ -66,7 +66,7 @@ solveQuadratic(1, -1, 0);
 // Answer 
 const printArray = () => {
     const array = [3, 4, 5, 6, 7];
-    for(let i = 0; i < array.length; i++){
+    for(let i = 0; i < array.length; i++){  // it loop the entire array and print each element in the array
     console.log(array[i]);
     }
     return array;
@@ -86,8 +86,8 @@ printArray();
 // Answer 
 
 const showDateTime = () => {
-    const now = new Date();
-    const year = now.getFullYear();
+    const now = new Date(); // creating a new date and saving it in a variable named 'now'
+    const year = now.getFullYear(); 
     const month = now.getMonth() + 1;
     const date = now.getDate();
     const hours = now.getHours();
@@ -135,8 +135,8 @@ swapValues(4, 5);
 
 const reverseArray = (array) => {
     const newArray = [];
-    for( let i = array.length - 1; i >= 0; i--){
-        newArray.push(array[i])
+    for( let i = array.length - 1; i >= 0; i--){  // loop the array in a reverse order
+        newArray.push(array[i]) // push the looping element into the empty array named 'newArray' 
     }
     console.log(newArray);
     return newArray;
@@ -151,7 +151,7 @@ reverseArray(['A', 'B', 'C']);
 
 // Answer 
 const capitalizedArray = (array) => {
-    const capitalizedArr = array.map((name) => name[0].toUpperCase().concat(name.substring(1));
+    const capitalizedArr = array.map((name) => name[0].toUpperCase().concat(name.substring(1)); // convert the first index of each element in the array to upper case and concat the remaining strings
     console.log(capitalizedArr);
     return capitalizedArr;
 }
@@ -167,7 +167,7 @@ capitalizedArray(['me', 'you', 'us', 'them']);
 // Answer 
 const addItem = (item) => {
     const food = [];
-    food.push(item);
+    food.push(item);    // pushing the item into the empty array named 'food'
     console.log(food);
     return food;
 }
@@ -182,7 +182,7 @@ addItem('Eba');
 // Answer
 const removeItem = (item) => {
     const names = ['Habib', 'Hameez', 'Hafeez', 'Hakeem'];
-    names.filter((name) => name !== item)
+    names.filter((name) => name !== item)   // removing the parameter after filtering the array
     console.log(names);
     return names;
 }
@@ -198,7 +198,7 @@ removeItem('Habib');
 const sumOfNumbers = (number) => {
     let sum = 0;
     for(let i = 0; i <= number; i++){
-        sum += i;
+        sum += i;       // loops over the length of the argument and sum it all together
     }
     console.log(sum);
     return sum;
@@ -215,9 +215,9 @@ sumOfNumbers(5);
 
 const sumOfOdds = (number) => {
     let sum = 0;
-    for(let i = 0; i <= number; i++){
-        if(i % 2 !== 0){
-            sum += i;
+    for(let i = 0; i <= number; i++){  
+        if(i % 2 !== 0){      // condition that i modulus 2 is not equal 0  
+            sum += i;       // loops within the argument and it all together after the if condition is met
         }
     }
     console.log(sum);
@@ -233,10 +233,10 @@ sumOfOdds(10);
 
 // Answer
 const sumOfEven = (number) => {
-    let sum = 0;
+    let sum = 0;    // declaring sum with initial value of 0
     for(let i = 0; i <= number; i++){
-        if(i % 2 == 0){
-            sum += i;
+        if(i % 2 == 0){ // condition that i modulus 2 is equal 0 
+            sum += i;   // loops within the argument and it all together after the if condition is met
         }
     }
     console.log(sum);
