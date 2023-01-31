@@ -151,7 +151,7 @@ reverseArray(['A', 'B', 'C']);
 
 // Answer 
 const capitalizedArray = (array) => {
-    const capitalizedArr = array.map(name => name.toUpperCase());
+    const capitalizedArr = array.map((name) => name[0].toUpperCase().concat(name.substring(1));
     console.log(capitalizedArr);
     return capitalizedArr;
 }
@@ -182,7 +182,7 @@ addItem('Eba');
 // Answer
 const removeItem = (item) => {
     const names = ['Habib', 'Hameez', 'Hafeez', 'Hakeem'];
-    names.shift(item);
+    names.filter((name) => name !== item)
     console.log(names);
     return names;
 }
