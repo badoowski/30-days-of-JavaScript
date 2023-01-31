@@ -26,11 +26,11 @@
 // Answer
 
 const userIdGeneratedByUser = () => {
-    let idToBeGenerated = parseInt(prompt('Enter the number of ID to be generated')) - 1;
-    let numberOfCharacters = parseInt(prompt('Enter the number of character of each ID')) + 2;
+    let idToBeGenerated = parseInt(prompt('Enter the number of ID to be generated')) - 1;	// Asked for the value of idToBeGenerated and use the parseInt to make sure the value is integer.
+    let numberOfCharacters = parseInt(prompt('Enter the number of character of each ID')) + 2;	// Asked for the value of numberOfCharacters and us the parseInt to make sure the value is integer and also add 2 to it.
     let ranId = '';
-    for(let i =  0; i <= idToBeGenerated; i++){
-       ranId = Math.random().toString(36).substring(2,numberOfCharacters);
+    for(let i =  0; i <= idToBeGenerated; i++){ // Iterate over the size of 'idToBeGenerate' 
+       ranId = Math.random().toString(36).substring(2,numberOfCharacters); 	// Generate a random string in alphaNumberic and remove the first two (to make 2 added in the second line).
         console.log(ranId);
                             }
              return ranId;
