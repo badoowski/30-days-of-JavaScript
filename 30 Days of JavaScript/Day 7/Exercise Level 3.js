@@ -51,7 +51,7 @@ userIdGeneratedByUser();
 // Answer
 
 const rgbColorGenerator = () => {
-    const ranR = Math.floor(Math.random() * 255);
+    const ranR = Math.floor(Math.random() * 255);		// Using Math.random to randomly generate numbers between 0 and 255 then using Math,floor to neglete the floating values.
     const ranG = Math.floor(Math.random() * 255);
     const ranB = Math.floor(Math.random() * 255);
     console.log('rgb(' + ranR+ ',' + ranG + ',' + ranB + ')');
@@ -69,7 +69,7 @@ const arrayOfHexaColors = (number) => {
     const arrOfHexa = [];
 	let randomHexa = '';
 	for(let i = 0; i < number; i++){
-    randomHexa = '#' + Math.floor(Math.random()*16777215).toString(16);
+    randomHexa = '#' + Math.floor(Math.random()*16777215).toString(16);		// Looping within the argument length and randomly generating Hexa code
 	arrOfHexa.push(randomHexa);
 	}
 		console.log(arrOfHexa);
@@ -87,10 +87,10 @@ const arrayOfRgbColors = (number) => {
     const arrRgb = [];
     let ranR, ranG, ranB;
     for(let i = 0; i < number;  i++){
-     ranR = Math.floor(Math.random() * 255);
+     ranR = Math.floor(Math.random() * 255);  // Using Math.random to randomly generate numbers between 0 and 255 then using Math,floor to neglete the floating values.
      ranG = Math.floor(Math.random() * 255);
      ranB = Math.floor(Math.random() * 255);
-     arrRgb.push('rgb(' + ranR + ',' + ranG + ',' + ranB + ')')
+     arrRgb.push('rgb(' + ranR + ',' + ranG + ',' + ranB + ')')		// push the randomly generated number into the array named 'arrRgb'
     }
     console.log(arrRgb);
     return arrRgb;
@@ -108,9 +108,9 @@ const convertHexaToRgb = (hexa) => {
     if(hexa.length != 6){
         console.log("Only six-digit hex colors are allowed.");
     }
-    let aRgbHex = hexa.match(/.{1,2}/g);
+    let aRgbHex = hexa.match(/.{1,2}/g); // used match() which returns an array to match the regular expression (/.{1,2}/g) which capture any one character between one to two digits.
     let aRgb = [
-        parseInt(aRgbHex[0], 16),
+        parseInt(aRgbHex[0], 16),	// Convert hexa decimal value into integer
         parseInt(aRgbHex[1], 16),
         parseInt(aRgbHex[2], 16)
     ];
@@ -128,10 +128,10 @@ convertHexaToRgb('1502BE');
 
 const convertRgbToHexa = (r, g, b) => {
     const valueToHex = (value) => {
-        const hex = value.toString(16);
-		return hex.length == 1 ? "0" + hex : hex;
+        const hex = value.toString(16);		// convert the numeric string into an hexa value
+		return hex.length == 1 ? "0" + hex : hex;	// if the hexa length is equal to 1, it will return string '0' plus hex value
     }    
-   const rgbToHexa = valueToHex(r) + valueToHex(g) + valueToHex(b)
+   const rgbToHexa = valueToHex(r) + valueToHex(g) + valueToHex(b)	// merging the newly converted hexa value together
     console.log('#' + rgbToHexa.toUpperCase());
     return(rgbToHexa);
 }
@@ -155,8 +155,8 @@ const generateColors = (color, number) => {
     if(color == 'hexa'){
             const arrOfHexa = [];
             let randomHexa = '';
-            for(let i = 0; i < number; i++){
-            randomHexa = '#' + Math.floor(Math.random()*16777215).toString(16);
+            for(let i = 0; i < number; i++){	// loop i within number length
+            randomHexa = '#' + Math.floor(Math.random()*16777215).toString(16);	// Randomly generate an hexa code and removing the floating values that follows
             arrOfHexa.push(randomHexa);
             }
                 console.log(arrOfHexa);
@@ -165,8 +165,8 @@ const generateColors = (color, number) => {
     else if(color == 'rgb'){
         const arrRgb = [];
     let ranR, ranG, ranB;
-    for(let i = 0; i < number;  i++){
-     ranR = Math.floor(Math.random() * 255);
+    for(let i = 0; i < number;  i++){	// loop i within number length
+     ranR = Math.floor(Math.random() * 255); // Using Math.random to randomly generate numbers between 0 and 255 then using Math,floor to neglete the floating values.
      ranG = Math.floor(Math.random() * 255);
      ranB = Math.floor(Math.random() * 255);
      arrRgb.push('rgb(' + ranR + ',' + ranG + ',' + ranB + ')')
@@ -189,10 +189,10 @@ const generateColors = (color, number) => {
 // Answer
 const shuffleArray = (array) => {
     let currentIndex = array.length,  randomIndex;
-      while (currentIndex != 0) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
+      while (currentIndex != 0) {	// while the currentIndex value is not equal to zero
+    randomIndex = Math.floor(Math.random() * currentIndex); // Using Math.random to randomly generate numbers between 0 and currentIndex value then using Math,floor to neglete the floating values.
     currentIndex--;
-    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];	// shuffle the array by interchanging the position each element in the array with the element next it to.
     }
     console.log(array);
   return array;
@@ -207,12 +207,12 @@ shuffleArray([1, 2, 3, 4, 5, 6]);
 // Answer
 const factorial = (number) => {
     let fac = 1;
-    if (number == 0 || number == 1){
-        console.log(number);
+    if (number == 0 || number == 1){	// if number is equal to 0 or number is equal to 1
+        console.log(number);	// print number
         return number;
       }
-      else if(number > 1){
-        for(let i = number; i >= 1; i--){
+      else if(number > 1){	// if number is greater than 1
+        for(let i = number; i >= 1; i--){ // looping the array starting from the number and looping in a decreamental form
           fac = fac * i;
         }
         console.log(fac);
@@ -231,10 +231,10 @@ factorial(5);
 
 // Answer
 const isEmpty = (check) => {
-    if (check.length === 0) {
+    if (check.length === 0) {	// if the number of elements in the array is equal to zero
         console.log('It is empty')
         return true;
-    } else{
+    } else{	// else if the number of elements in array is not equal to zero
         console.log('It is not empty')
         return false;
     }
@@ -250,10 +250,10 @@ isEmpty(arr);
 
 // Answer
 
-const sum = (...args) => {
+const sum = (...args) => {	// passing-in a rest parameter to accept an indefinite value
     let summ = 0;
-    for (const element of args) {
-      summ += element
+    for (const element of args) {	// loop through every element in the parameter
+      summ += element	// add each value of the elements to the initial value of sum
     }
     console.log(summ);
     return summ
@@ -269,9 +269,9 @@ sum(2, 4, 5, 3);
 // Answer
 const sumOfArrayItems = (array) => {
     let summ = 0;
-    for (const element of array) {
-        if(typeof element === 'number'){
-            summ += element;
+    for (const element of array) {	// loop through every element in the parameter
+        if(typeof element === 'number'){	// if the type of elements in the parameter passed-in is in numeric form
+            summ += element;	// add each value of the elements to the initial value of sum
         }
     else {
         console.log('The array have other datatypes other than numbers')
