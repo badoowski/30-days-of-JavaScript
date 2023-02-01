@@ -68,11 +68,14 @@ getFirstTenCountries(countries)
 */
 
 // Answer
-let getLastTenCountries = countries.filter((country) => countries.indexOf(country) > countries.length - 11);  
-console.log(getLastTenCountries);
+const getLastTenCountries = (array) => {
+    let n = 10;
+   const lastTen = array.slice(-n).map((country) => country)
+    console.log(lastTen)
+    return lastTen;
+}
 
 getLastTenCountries(countries)
-
 /*
     Question 7: Find out which _letter_ is used many _times_ as initial for a country name from the countries 
     array (eg. Finland, Fiji, France etc)
