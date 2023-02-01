@@ -58,6 +58,7 @@ const getFirstTenCountries = (array) => {
     let n = 10;
    const firstTen = array.slice(0, n).map((country) => country)
     console.log(firstTen)
+    return firstTen;
 }
 getFirstTenCountries(countries)
 
@@ -67,11 +68,8 @@ getFirstTenCountries(countries)
 */
 
 // Answer
-const getLastTenCountries = (array) => {
-    let n = 10;
-   const lastTen = array.slice(-n).map((country) => country)
-    console.log(lastTen)
-}
+let getLastTenCountries = countries.filter((country) => countries.indexOf(country) > countries.length - 11);  
+console.log(getLastTenCountries);
 
 getLastTenCountries(countries)
 
@@ -82,8 +80,8 @@ getLastTenCountries(countries)
 
 // Answer
 const mostFrequentInitialLetter = (arr) =>{
- let frequentLetter = arr.map(([country]) => country).reduce((acc, val) => {
-    acc[val] = (acc[val] || 0 ) + 1;
+ let frequentLetter = arr.map(([country]) => country).reduce((acc, val) => {   
+    acc[val] = (acc[val] || 0 ) + 1;   
     return acc
 },{});
   return Object.keys(frequentLetter).reduce((a, b) => frequentLetter[a] > frequentLetter[b] ? a : b)
