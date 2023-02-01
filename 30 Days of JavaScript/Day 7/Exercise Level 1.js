@@ -19,7 +19,7 @@ fullName();
 // Answer
 
 function _fullName(firstName, lastName){
-    const full_Name = firstName + ' ' + lastName;
+    const full_Name = firstName + ' ' + lastName;       // using the + sign to join the two parameters
     console.log(full_Name);
 }
 
@@ -32,7 +32,7 @@ _fullName('Habib', 'Salau');
 // Answer
 
 function addNumber (number1, number2){
-    const sum = number1 + number2;
+    const sum = number1 + number2;      // using the + sign to add the two parameters
     console.log(sum);
     return sum;
 }
@@ -46,7 +46,7 @@ addNumber(4, 5);
 // Answer
 
 function areaOfRectangle (length, width){
-    const area =  length * width;
+    const area =  length * width;   // calculating the area of a rectangle
     console.log(area);
     return area;
 }
@@ -60,7 +60,7 @@ function areaOfRectangle (length, width){
 // Answer
 
 function perimeter (length, width){
-    const perimeter = 2 * (length + width);
+    const perimeter = 2 * (length + width);     // calculating the perimeter of a rectangle
     console.log(perimeter);
     return perimeter;
 }
@@ -75,7 +75,7 @@ perimeter(5, 3);
 // Answer
 
 let volume = (length, width, height) => {
-    volume = length * width * height;
+    volume = length * width * height;       // calculating the volume of a rectangular prism
     console.log(volume);
     return volume;
 }
@@ -91,7 +91,7 @@ volume(2, 3, 4);
 
 let areaOfCircle = (radius) => {
     const π = 3.14;
-    areaOfCircle = π * radius * radius;
+    areaOfCircle = π * radius * radius;     // calculating the area of a cirlce
     console.log(areaOfCircle);
     return areaOfCircle;
 }
@@ -108,7 +108,7 @@ areaOfCircle(5);
 
  let circumOfCircle = (radius) => {
     const π = 3.14;
-    circumOfCircle = 2 * π * radius;
+    circumOfCircle = 2 * π * radius; //calculating the circumference of a circle
     console.log(circumOfCircle);
     return circumOfCircle;
  }
@@ -123,7 +123,7 @@ areaOfCircle(5);
 // Answer
 
 let density = (mass, volum) => {
-    density = mass / volum;
+    density = mass / volum;     // calculating the value of density
     console.log(density);
     return density;
 }
@@ -139,7 +139,7 @@ density(8, 4);
 // Answer
 
 let speed = (distance, time) => {
-    speed = distance / time;
+    speed = distance / time;        // calculating the speed of a moving object
     console.log(speed);
     return speed;
 }
@@ -156,7 +156,7 @@ speed(400, 20);
 // Answer
 let weight = (mass) => {
     const gravity = 9.81;
-    weight = mass * gravity;
+    weight = mass * gravity;        // calculating the weight of a substance
     console.log(weight);
     return weight;
 }
@@ -171,7 +171,7 @@ weight(800);
 // Answer
 
 const convertCelsiusToFahrenheit = (celsius) => {
-    const fahrenheit = (celsius * 9 / 5) + 32;
+    const fahrenheit = (celsius * 9 / 5) + 32;      // converting temperature from celsius to fahrenheit
     console.log(fahrenheit);
     return fahrenheit;
 }
