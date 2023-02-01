@@ -26,10 +26,10 @@
 // Answer
 
 const userIdGeneratedByUser = () => {
-    let idToBeGenerated = parseInt(prompt('Enter the number of ID to be generated')) - 1;	// Asked for the value of idToBeGenerated and use the parseInt to make sure the value is integer.
+    let idToBeGenerated = parseInt(prompt('Enter the number of ID to be generated'));	// Asked for the value of idToBeGenerated and use the parseInt to make sure the value is integer.
     let numberOfCharacters = parseInt(prompt('Enter the number of character of each ID')) + 2;	// Asked for the value of numberOfCharacters and us the parseInt to make sure the value is integer and also add 2 to it.
     let ranId = '';
-    for(let i =  0; i <= idToBeGenerated; i++){ // Iterate over the size of 'idToBeGenerate' 
+    for(let i =  0; i < idToBeGenerated; i++){ // Iterate over the size of 'idToBeGenerate' 
        ranId = Math.random().toString(36).substring(2,numberOfCharacters); 	// Generate a random string in alphaNumberic and remove the first two (to make 2 added in the second line).
         console.log(ranId);
                             }
@@ -315,8 +315,8 @@ average([2, 3, 4]);
 
 // Answer
 const modifyArray = (array) => {
-    if(array.length > 4){
-   array[4] = array[4].toUpperCase();
+    if(array.length > 4){	// if the number of elements in the array is greater than 4
+   array[4] = array[4].toUpperCase();	// converting the element in the fourth index to upper case
   console.log(array);
 
     } else {
@@ -337,9 +337,9 @@ modifyArray(['boy', 'girl', 'mom']);
 const isPrime = (number) => {
     let store  = [];
     let primes = [];
-    for (let i = 2; i <= number; ++i) 
+    for (let i = 2; i <= number; ++i) 	// looping i within the size of parameter 'number'
     {
-        if (!store [i]) 
+        if (!store [i])
           {
             primes.push(i);
             for (let j = i < 1; j <= number; j += i) 
@@ -362,12 +362,12 @@ isPrime(100);
 
 const isUnique = (username) => {
     const array = ['Habib', 'Lekan'];
-    for(let i = 0; i < array.length; i++){
-        if(array[i] === username){
+    for(let i = 0; i < array.length; i++){ 	// loop within the length of the array
+        if(array[i] === username){	// checks if the parameter 'username' already exist in the array
             console.log('username already exist');
             break;
         }else{
-            array.unshift(username);
+            array.unshift(username);	// add the parameter 'username' to the array
             console.log(username + ' is added successfully')
         console.log(array);
         break;
@@ -385,9 +385,9 @@ isUnique('Habib');
 
 // Answer
 
-const check = (array) => {
+const check = (array) => { 	// array is passed in as a parameter
     let arr = '';
-    arr = new Set(array.map(x => typeof x)).size <= 1;
+    arr = new Set(array.map(x => typeof x)).size <= 1;	//map function is used to check if all the elements in the array are of the same datatype
     console.log(arr);
     return arr;
 }
@@ -403,8 +403,8 @@ check([3, 4, 5]);
 // Answer
 
 const isValidVariable = (variable) => {
-    let format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-if(format.test(variable)){
+    let format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/; 		//listing special character values
+if(format.test(variable)){		// checks if the parameter 'variable' is among any of the listed special characters
     console.log('Invalid Variable')
   return true;
 } else {
@@ -432,9 +432,9 @@ isValidVariable('sajk');
 
 const sevenRandomNumbers = () => {
     let numbers = []
-    for (let i = 0; i < 9; i++){
-        let ranNum = Math.floor(Math.random() * 10);
-            numbers.push(ranNum);
+    for (let i = 0; i < 9; i++){	// loops the code within the 'for' statement nine times
+        let ranNum = Math.floor(Math.random() * 10);	// generate random number between 0 and 9
+            numbers.push(ranNum); // push the random number generated into the array 'numbers'
         }
         console.log(numbers);
         return numbers;
@@ -450,9 +450,9 @@ sevenRandomNumbers();
 
 const reverseCountries = (array) => {
     let copyArray = [];
-    copyArray = [...array];
+    copyArray = [...array];	// copy all the elements in the parameter 'array' into the array 'copyArray' without altering the 'array'
     console.log(copyArray);
-    array.reverse();
+    array.reverse();	// used the reverse () method to reverse the elements of the array
     console.log(array);
 }
 
