@@ -1,0 +1,67 @@
+<!-- Exercise  Level 1 --> 
+
+<!-- 
+    Question 1: Create an index.html file and put four p elements as above: Get the first paragraph by using 
+    **_document.querySelector(tagname)_** and tag name.
+
+    Question 2: Get each of the the paragraph using **_document.querySelector('#id')_** and by their id
+
+    Question 3: Get all the p as nodeList using **_document.querySelectorAll(tagname)_** and by their tag name
+
+    Question 4: Loop through the nodeList and get the text content of each paragraph
+
+    Question 5: Set a text content to paragraph the fourth paragraph,**_Fourth Paragraph_**
+
+    Question 6: Set id and class attribute for all the paragraphs using different attribute setting methods
+    
+-->
+
+<!-- Question 1 Answer -->
+
+<html lang="en">
+    <head>
+        <title>
+            Exercise Level 1
+        </title>
+    </head>
+    <body>
+        <p class="paragraph" id="first-paragraph">First Paragraph</p>
+        <p class="paragraph" id="second-paragraph">Second Paragraph</p>
+        <p>Third Paragraph</p>
+        <p></p>
+
+        <script>
+            const firstParagraph = document.querySelector('p')
+            console.log(firstParagraph)
+
+            // Question 2 Answer
+            const firstParagraphId = document.querySelector('#first-paragraph')
+            const secondParagraphId = document.querySelector('#second-paragraph')
+            const thirdParagraphId = document.querySelector('#third-paragraph')
+            const fourthParagraphId = document.querySelector('#fourth-paragraph')
+            console.log(firstParagraphId)
+            console.log(secondParagraphId)
+            console.log(thirdParagraphId)
+            console.log(fourthParagraphId)
+
+            // Question 3 Answer
+            const getAllP = document.querySelectorAll('p')
+            console.log(getAllP)
+            
+            // Question 4 Answer
+            getAllP.forEach((paragraph) => {
+                console.log(paragraph)
+            })
+
+            // Question 5 Answer
+            getAllP[3].textContent = 'Fourth Paragraph'
+
+            // Question 6 Answer
+            getAllP[3].className = 'paragraph'
+            getAllP[3].id = 'fourth-paragraph'
+            getAllP[2].setAttribute('class', 'paragraph')
+            getAllP[2].setAttribute('id', 'third-paragraph')
+
+        </script>
+    </body>
+</html>

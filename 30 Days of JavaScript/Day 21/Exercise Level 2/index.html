@@ -1,0 +1,68 @@
+<!-- Exercise  Level 2 --> 
+
+<!-- 
+    Question 1: Change stye of each paragraph using JavaScript(eg. color, background, border, font-size, font-family)
+
+    Question 2: Select all paragraphs and loop through each elements and give the first and third paragraph a color of green, and the 
+    second and the fourth paragraph a red color
+
+    Question 3: Set text content, id and class to each paragraph
+
+    
+-->
+
+<!-- Question 1 Answer -->
+
+<html lang="en">
+    <head>
+        <title>
+            Exercise Level 2
+        </title>
+    </head>
+    <body>
+        <p class="paragraph" id="first-paragraph">First Paragraph</p>
+        <p class="paragraph" id="second-paragraph">Second Paragraph</p>
+        <p>Third Paragraph</p>
+        <p></p>
+
+        <script>
+            const firstParagraph = document.querySelector('p')
+            console.log(firstParagraph)
+            const firstParagraphId = document.querySelector('#first-paragraph')
+            const secondParagraphId = document.querySelector('#second-paragraph')
+            const thirdParagraphId = document.querySelector('#third-paragraph')
+            const fourthParagraphId = document.querySelector('#fourth-paragraph')
+            console.log(firstParagraphId)
+            console.log(secondParagraphId)
+            console.log(thirdParagraphId)
+            console.log(fourthParagraphId)
+            const getAllP = document.querySelectorAll('p')
+            console.log(getAllP)            
+            getAllP.forEach((paragraph) => {
+                console.log(paragraph)
+            })
+            getAllP[3].textContent = 'Fourth Paragraph'
+
+            getAllP[3].className = 'paragraph'
+            getAllP[3].id = 'fourth-paragraph'
+            getAllP[2].setAttribute('class', 'paragraph')
+            getAllP[2].setAttribute('id', 'third-paragraph')
+
+            //  Answer
+            getAllP.forEach((paragraph, i) => {
+                paragraph.style.border = 'dotted red 5px'
+                paragraph.style.fontFamily = 'Time New Roman'
+                if(i % 2 === 0){
+                    paragraph.style.fontSize = '30px'
+                    paragraph.style.color = 'green'
+                    paragraph.style.backgroundColor = 'black'
+                } else{
+                    paragraph.style.fontSize = '45px'
+                    paragraph.style.color = 'red'
+                    paragraph.style.backgroundColor = 'brown'
+                }
+            })
+
+        </script>
+    </body>
+</html>
