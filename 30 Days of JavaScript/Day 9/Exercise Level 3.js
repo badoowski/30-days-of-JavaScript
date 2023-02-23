@@ -55,15 +55,9 @@ mostSpokenLanguage(countries, 3)
 */
 // Answer
 const tenMostPopulatedCountries = (arr, num) => {
-    const sortByPopulation = arr.map((populations)=> populations.population);
-    const Comparator = (a, b) => {
-        if (b[1] < a[1]) return -1;
-        if (b[1] > a[1]) return 1;
-        return 0;
-    }
-    const sorted = [...sortByPopulation.entries()].sort(Comparator);
-    console.log(sorted.slice(0,num));
-    return sorted
+    arr.sort((a, b) => b.population - a.population)
+   const mostPopulated = arr.map(country => `${country.name}, ${country.population}`)
+   console.log(mostPopulated.slice(0, num))
 }
 tenMostPopulatedCountries(countries, 10)
 
