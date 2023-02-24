@@ -7,13 +7,13 @@
 
 require('./countries.js');
 // Sort by name
-const sortByName = countries.map((names)=> names.name).sort();
+const sortByName = countries.sort((a, b) => a.name - b.name);
 console.log(sortByName)
 // Sort by capital
-const sortByCapital = countries.map((capitals)=> capitals.capital).sort()
+const sortByCapital = countries.sort((a, b) => a.capital - b.capital)
 console.log(sortByCapital)
 // Sort by population
-const sortByPopulation = countries.map((populations)=> populations.population).sort((a, b) => a - b);
+const sortByPopulation = countries.sort((a, b) => a.population - b.population);
 console.log(sortByPopulation)
 
 /*
