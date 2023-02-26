@@ -6,8 +6,12 @@ types
 // Answer
 
  const str = "30 days of Javascript"; // string
+ 
  const alive = true;	// boolean
+ 
  let firstName;	// undefined
+ 
  const list =  null;	// null
+ 
  const age = 30;	// number
 	
