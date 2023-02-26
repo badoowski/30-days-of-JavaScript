@@ -88,7 +88,7 @@ Question 10: Split the string 30 Days Of JavaScript at the space using __split()
 
 // Answer
 
-console.log(challenge.split(""));
+console.log(challenge.split(" "));
 
 
 /*
