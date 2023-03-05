@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge LeaderBoard</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: min(100% -30px, 840px);
+            margin-inline: auto;
+        }
+
+        .h2 {
+            text-align: center;
+        }
+
+        .inputs {
+            width: 8rem;
+            height: 25px;
+            border-color: rgb(219, 189, 150);
+            border-width: thin;
+        }
+
+        .inputs:hover {
+            border-color: red;
+        }
+
+        .button {
+            width: 8rem;
+            height: 28px;
+            background-color: rgb(219, 189, 150);
+            border: none;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+
+        .error {
+            text-align: center;
+        }
+
+        .player {
+            background: #e5c9c5;
+            height: 5rem;
+            padding: 1rem 1.2rem;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            width: min(100% -30px, 840px);
+            margin-inline: auto;
+        }
+
+        .edit-button {
+            border-radius: 50%;
+            height: 35px;
+            width: 35px;
+            border: none;
+            background-color: white;
+        }
+
+        .edit {
+            padding-top: 1rem;
+        }
+
+        .box {
+            align-items: flex-start;
+        }
+
+        .date{
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="h2">30 Days fo Javascript Challenge Leaderboard</h2>
+        <input type="text" id="first-name" class="inputs" placeholder="First Name" />
+        <input type="text" id="last-name" class="inputs" placeholder="Last Name" />
+        <input type="text" id="country" class="inputs" placeholder="Country" />
+        <input type="number" id="score" class="inputs" placeholder="Player Score" />
+        <button class="button">Add Player</button>
+        <p class="error"></p>
+
+        <div class="field">
+
+        </div>
+
+    </div>
+
+    <script>
+        const firstName = document.querySelector('#first-name')
+        const lastName = document.querySelector('#last-name')
+        const country = document.querySelector('#country')
+        const score = document.querySelector('#score')
+        const buttons = document.querySelector('.button')
+        const errorParagraph = document.querySelector('.error')
+        const field = document.querySelector('.field')
+        // formatting the month
+
+        const addPlayer = () => {
+            // creating list for each player to be added
+            const player = document.createElement("li")
+            player.className = 'player'
+            field.appendChild(player)
+            // creating the box to contain the name
+            const box = document.createElement("div")
+            box.className = 'box'
+            player.appendChild(box) // adding each box created to the list
+            // creating name and time tags
+            const name = document.createElement("h5")
+            const date = document.createElement("p")
+            box.appendChild(name) // adding the name and date into the box
+            // adding the value of both first name and last name
+            name.textContent = `${firstName.value.toUpperCase()}    ${lastName.value.toUpperCase()}`
+            date.className = 'date'
+            // adding date
+            const now = new Date()
+            const years = now.getFullYear()
+            const month = now.getMonth()
+            const currentDate = now.getDate()
+            let hours = now.getHours()
+            let minutes = now.getMinutes()
+            let seconds = now.getSeconds()
+            if (hours < 10) {
+                hours = `0${hours}`
+            }
+            if (seconds < 10) {
+                seconds = `0${seconds}`
+            }
+            if (minutes < 10) {
+                minutes = `0${minutes}`
+            }
+            let mon = new Array("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC");
+            let monn = mon[month]
+            date.textContent = `${monn} ${currentDate}, ${years} ${hours}:${minutes}`
+            box.appendChild(date)
+
+            const countryy = document.createElement("h5")
+            countryy.className = 'country'
+            countryy.textContent = country.value.toUpperCase()
+            player.appendChild(countryy)
+
+
+            let scores = document.createElement("h5")
+            scores.id = 'scores'
+            scores.style.border = 'none'
+            scores.readOnly = true
+            scores.textContent = `${score.value}`
+            scores.className = 'scores'
+            player.appendChild(scores)
+
+            let editBox = document.createElement('div')
+            editBox.className = 'edit'
+            player.appendChild(editBox)
+
+            let del = document.createElement('button')
+            del.className = 'edit-button'
+            del.textContent = 'DEL'
+            del.addEventListener('click', (e) => {
+                player.parentNode.removeChild(player)
+            })
+            editBox.appendChild(del)
+
+
+
+            const minusFives = () => {
+                scores.textContent = parseInt(score.value) - 5
+            }
+            let addFive = document.createElement('button')
+            addFive.className = 'edit-button'
+            addFive.textContent = '+5'
+            editBox.appendChild(addFive)
+            addFive.onclick = () => {
+                scores.textContent = parseInt(scores.textContent) + 5
+            }
+
+            let minusFive = document.createElement('button')
+            minusFive.className = 'edit-button'
+            minusFive.textContent = '-5'
+            editBox.appendChild(minusFive)
+            minusFive.onclick = () => {
+                scores.textContent = parseInt(scores.textContent) - 5
+            }
+
+        }
+
+        const cantBeEmpty = () => {
+            if (firstName.value === '' || lastName.value === '' || country.value === '' || score.value === '') {
+                errorParagraph.innerHTML = 'All field are required'
+            } else {
+                errorParagraph.innerHTML = ''
+                addPlayer()
+            }
+        }
+        buttons.addEventListener("click", cantBeEmpty)
+    </script>
+</body>
+
+</html>

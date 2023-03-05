@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+        .wrapper {
+            margin: 0 8rem;
+        }
+
+        .asabeneh {
+            margin-top: 2rem;
+            font-weight: bold;
+            letter-spacing: 0.5rem;
+            font-size: 3rem;
+            text-align: left;
+            margin-left: 1rem;
+        }
+
+        .activities {
+            background-color: #eddfde;
+            ;
+            height: 4rem;
+
+        }
+
+        .activity {
+            padding-top: 1.2rem;
+        }
+
+        .days {
+            font-weight: bold;
+        }
+
+        .text {
+            margin-top: 0.8rem;
+            font-weight: 1rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+            font-size: 1.05rem;
+        }
+
+        .course {
+            display: flex;
+            margin-top: 2rem;
+            justify-content: space-around;
+
+        }
+
+        #course-item:hover {
+            background-color: #eddfde;
+            cursor: auto;
+        }
+
+        .techs {
+            margin-top: 2rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="asabeneh"></h1>
+        <div class="activities">
+            <p class="activity"></p>
+        </div>
+        <p class="text">I am Asabeneh Yetayeh. I am instructor, developer, motivator and content creator. I love
+            educating people and creating educational materials. In January 2019, I also created a teaching material
+            <span class="days">JavaScript for Everyone.</span> In December 2019, I created <span class="days">30 Days of
+                Python</span> challenge and in January 2020 <span class="days">30 Days of JavaScript</span> challenge.
+        </p>
+
+        <div class="course"></div>
+        <p class="techs"></p>
+
+
+        <script src="activities.js"></script>
+        <script src="course.js"></script>
+        <script>
+            const names = document.querySelector('.asabeneh')
+            const activityy = document.querySelector('.activity')
+            const acti = document.querySelector('.activities')
+            const coursed = document.querySelector('.course')
+            const techs = document.querySelector('.techs')
+            //styling
+            names.textContent = 'Asabeneh Yetayeh'
+            techs.innerHTML = `The technologies I teach<span id="teach"><span>`
+            let year = document.querySelector("#teach");
+
+            function activity_text() {
+                setTimeout(function () {
+                    year.textContent = `${activities[0]}`;
+                    year.style.marginLeft = "2rem";
+                }, 0)
+                setTimeout(function () {
+                    activityy.style.marginLeft = "4rem";
+                }, 2000)
+
+                setTimeout(function () {
+                    activityy.textContent = `${activities[1]}`;
+                }, 3500)
+                setTimeout(function () {
+                    activityy.style.marginLeft = "2rem";
+                }, 4000)
+
+                setTimeout(function () {
+                    activityy.style.marginLeft = "4rem";
+                }, 5500)
+                setTimeout(function () {
+                    activityy.textContent = `${activities[2]}`;
+                }, 6000)
+                setTimeout(function () {
+                    activityy.style.marginLeft = "3rem";
+                }, 6500)
+                setTimeout(function () {
+                    activityy.textContent = `${activities[3]}`;
+                }, 7000)
+
+                setTimeout(function () {
+                    activityy.style.marginLeft = "3rem";
+                }, 7500)
+                setTimeout(function () {
+                    activityy.textContent = `${activities[4]}`;
+                }, 8000)
+                setTimeout(function () {
+                    activityy.style.marginLeft = "3rem";
+                }, 8500)
+            }
+            setInterval(activity_text, 9000);
+
+            courses.map((courses) => {
+                let lang = document.createElement("p");
+                lang.id = 'course-item'
+                lang.style.textTransform = 'uppercase'
+                lang.style.padding = '2.8rem 0.9rem'
+                lang.style.border = '0.1px solid rgb(240, 235, 235)'
+                lang.style.borderRadius = '5px'
+                lang.textContent = `${courses}`
+                coursed.append(lang)
+            })
+
+            function chameleon() {
+                setTimeout(function () {
+                    teach.textContent = 'REACT'
+                    teach.style.fontSize = '2rem'
+                    teach.style.fontWeight = '600'
+                    teach.style.color = 'blue'
+                }, 0)
+
+                setTimeout(function () {
+                    teach.textContent = 'REDUX'
+                    teach.style.color = 'purple'
+                }, 2000)
+
+                setTimeout(function () {
+                    teach.textContent = 'NODE'
+                    teach.style.color = 'green'
+                }, 4000)
+
+                setTimeout(function () {
+                    teach.textContent = 'PYTHON'
+                    teach.style.color = 'rgb(21, 84, 87)'
+                }, 6000)
+
+                setTimeout(function () {
+                    teach.textContent = 'MONGODB'
+                    teach.style.color = 'green'
+                }, 8000)
+
+                setTimeout(function () {
+                    teach.textContent = 'PANDAS'
+                    teach.style.color = 'rgb(21, 84, 87)'
+                }, 10000)
+
+                setTimeout(function () {
+                    teach.textContent = 'NUMPY'
+                    teach.style.color = 'rgb(21, 84, 87)'
+                }, 12000)
+
+                setTimeout(function () {
+                    teach.textContent = 'JAVASCRIPT'
+                    teach.style.color = 'yellow'
+                }, 14000)
+            }
+            setInterval(chameleon, 15000)
+
+        </script>
+    </div>
+</body>
+
+</html>

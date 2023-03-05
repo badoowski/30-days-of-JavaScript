@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISUALIZATION COUNTRIES</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .header {
+            background: linear-gradient(0deg, rgb(60, 90, 116, 0.4), rgb(60, 90, 116, 0.9)), url(./globe-2.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 25rem;
+            width: 100%;
+        }
+
+        .opacity {
+            opacity: 99%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 5rem;
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 8px;
+        }
+
+        #total-countries {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 70px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            color: aliceblue;
+            font-weight: bold;
+        }
+
+        .button-div {
+            display: flex;
+            justify-content: center;
+        }
+
+        .search {
+            border: none;
+            border-radius: 80px;
+            padding: 0.8rem;
+            width: 25rem;
+            height: 1rem;
+            margin-top: 1rem;
+            text-align: center;
+
+        }
+
+        .col {
+            display: flex;
+            justify-content: center;
+        }
+
+        .fa {
+            color: aliceblue;
+            padding-top: 1rem;
+        }
+
+        .body-div {
+            display: inline-grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            vertical-align: middle;
+            padding-left: 4rem;
+            padding-top: 6rem;
+
+        }
+
+        .body-container {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 3rem;
+            padding-right: 2rem;
+        }
+
+        .box {
+            background: linear-gradient(0deg, rgb(60, 90, 116, 0.4), rgb(60, 90, 116, 0.9)), url('./map_image.jpg');
+            background-size: 99%;
+            background-repeat: no-repeat;
+            width: auto;
+            margin-top: 2rem;
+
+        }
+
+
+        #stating-word:hover,
+        #anyword:hover,
+        #a-z:hover {
+            border: rgb(81, 20, 195) solid 0.5px;
+            width: auto;
+            height: 2rem;
+            text-align: center;
+            color: rgb(219, 219, 219);
+            background-color: rgb(81, 20, 195);
+            cursor: pointer;
+        }
+
+        #statement {
+            display: flex;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            color: aliceblue;
+            font-weight: bold;
+        }
+
+        .fa {
+            margin-top: 1rem;
+        }
+
+        #button-options option {
+            width: auto;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 5px;
+            height: 2rem;
+            background-color: blueviolet;
+            color: aliceblue;
+            border: none;
+            margin-left: 2px;
+            text-align: center;
+        }
+
+        #button-options {
+            height: 55px;
+            border: none;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        #button-options::-moz-focus-inner {
+            border: 0;
+        }
+
+        #button-options:focus {
+            outline: none;
+        }
+
+        .button-class{
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="opacity">
+            <h1>WORLD COUNTRIES LIST</h1>
+            <p id="total-countries"></p>
+            <p id="statement"></p>
+            <div class="button-div">
+                <select id="button-options" multiple>
+                    <option value="1" id="stating-word" class="button-class">STARTING WORD</option>
+                    <option value="2" id="anyword" class="button-class">SEARCH WITH ANY WORD</option>
+                    <option value="3" id="a-z" class="button-class">↓A/Z</option>
+                </select>
+            </div>
+            <div class='col'> <input type="text" class="search" placeholder="Search country..." /> <i
+                    class="fa fa-search"></i></div>
+            <div class="body-container">
+                <div class="body-div">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="countries.js"></script>
+    <script>
+        const body = document.querySelector('body')
+        const p = document.querySelector('#total-countries')
+        const div = document.querySelector('.body-div')
+        const input = document.querySelector('input')
+        const bodyContainer = document.querySelector('.body-container')
+        const statement = document.querySelector('#statement')
+        const btnOne = document.querySelector('#stating-word')
+        const btnTwo = document.querySelector('#anyword')
+        const btnThree = document.querySelector('#a-z')
+        const btn = document.querySelectorAll('.button-class')
+
+
+
+        // styling
+        p.textContent = `Total Number of countries: 193`
+
+        // functions
+        const country = countries.map((country) => country.toUpperCase())
+        const countryy = countries.map((country) => country.toLowerCase())
+        const reverseCountry = countries.reverse().map((country) => country.toUpperCase())
+
+        const allCountries = () => {
+            div.innerHTML = ''
+            for (let i = 0; i < countries.length; i++) {
+                let box = document.createElement("div")
+                box.className = 'box'
+                box.style.height = '22px'
+                box.style.border = '1px solid #dbd9e1'
+                box.style.fontSize = '15px'
+                box.style.padding = '2rem 0.2rem'
+                box.style.color = 'white'
+                box.style.width = '8rem'
+
+                box.style.textAlign = 'center'
+                box.style.fontWeight = "bold"
+                box.style.margin = '0.2rem'
+                box.textContent = country[i]
+                div.appendChild(box)
+            }
+        }
+        allCountries()
+
+        const includeWord = () => {
+            div.innerHTML = ''
+            let includeWord = input.value
+            let count = 0
+            for (let i = 0; i < countries.length; i++) {
+                let box = document.createElement("div")
+                box.className = 'box'
+                box.style.height = '22px'
+                box.style.border = '1px solid #dbd9e1'
+                box.style.fontSize = '15px'
+                box.style.padding = '2rem 0.2rem'
+                box.style.color = 'white'
+                box.style.width = '8rem'
+
+                box.style.textAlign = 'center'
+                box.style.fontWeight = "bold"
+                box.style.margin = '0.2rem'
+                if (countryy[i].includes(includeWord.toLowerCase())) {
+                    box.textContent = country[i]
+                    count++
+                    div.appendChild(box)
+                }
+                statement.textContent = `Countries containing ${includeWord} are ${count}`
+            }
+
+        }
+        const startWord = () => {
+            div.innerHTML = ''
+            let startWord = input.value
+            let count = 0
+            for (let i = 0; i < countries.length; i++) {
+                let box = document.createElement("div")
+                box.className = 'box'
+                box.style.height = '22px'
+                box.style.border = '1px solid #dbd9e1'
+                box.style.fontSize = '15px'
+                box.style.padding = '2rem 0.2rem'
+                box.style.color = 'white'
+                box.style.width = '8rem'
+
+                box.style.textAlign = 'center'
+                box.style.fontWeight = "bold"
+                box.style.margin = '0.2rem'
+                if (countryy[i].startsWith(startWord.toLowerCase())) {
+                    box.textContent = country[i]
+                    count++
+                    div.appendChild(box)
+                }
+                statement.textContent = `Countries that starts with ${startWord} are ${count}`
+            }
+        }
+
+
+        const ascendingOrder = () => {
+            div.innerHTML = ''
+            for (let i = 0; i < countries.length; i++) {
+                let box = document.createElement("div")
+                box.className = 'box'
+                box.style.height = '22px'
+                box.style.border = '1px solid #dbd9e1'
+                box.style.fontSize = '15px'
+                box.style.padding = '2rem 0.2rem'
+                box.style.color = 'white'
+                box.style.width = '8rem'
+
+                box.style.textAlign = 'center'
+                box.style.fontWeight = "bold"
+                box.style.margin = '0.2rem'
+                box.textContent = country[i]
+                div.appendChild(box)
+            }
+        }
+        const decendingSort = () => {
+            div.innerHTML = ''
+            for (let i = 0; i < reverseCountry.length; i++) {
+                let box = document.createElement("div")
+                box.className = 'box'
+                box.style.height = '22px'
+                box.style.border = '1px solid #dbd9e1'
+                box.style.fontSize = '15px'
+                box.style.padding = '2rem 0.2rem'
+                box.style.color = 'white'
+                box.style.width = '8rem'
+                box.style.textAlign = 'center'
+                box.style.fontWeight = "bold"
+                box.style.margin = '0.2rem'
+                box.textContent = reverseCountry[i]
+                div.appendChild(box)
+            }
+        }
+
+        //adding function to button
+        input.addEventListener('input', () => {
+            let check = document.getElementById('button-options').value
+            if (check === "1") {
+                startWord()
+            } else if (check === "2") {
+                includeWord()
+            }
+        })
+        btnThree.addEventListener('click', decendingSort)
+        btnThree.addEventListener('dblclick', ascendingOrder)
+
+
+    </script>
+</body>
+
+</html>
