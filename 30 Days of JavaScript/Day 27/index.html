@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+        .wrapper {
+            margin: 0 8rem;
+        }
+        .activities{
+           align-items: center;
+        }
+        .asabeneh {
+            margin-top: 2rem;
+            font-weight: bold;
+            letter-spacing: 0.5rem;
+            font-size: 3rem;
+            text-align: left;
+            margin-left: 1rem;
+        }
+        .activity {
+            padding-top: 1.2rem;
+        }
+
+        .marquee {
+            width: auto;
+            line-height: 50px;
+            background-color: #eddfde;
+            color: Black;
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .marquee p {
+            display: inline-block;
+            animation: marquee 6s linear infinite;
+
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translate(-100%, 0);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        .days {
+            font-weight: bold;
+        }
+
+        .text {
+            margin-top: 0.8rem;
+            font-weight: 1rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+            font-size: 1.05rem;
+        }
+
+        .course {
+            display: flex;
+            margin-top: 2rem;
+            justify-content: space-around;
+
+        }
+
+        #course-item:hover {
+            background-color: #eddfde;
+            cursor: auto;
+        }
+
+        .techs {
+            margin-top: 2rem;
+
+        }
+
+        .teach {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="asabeneh"></h1>
+        <div class="activities">
+        <div class="marquee">
+            <p class="activity"></p>
+        </div>
+    </div>
+        <p class="text">I am Asabeneh Yetayeh. I am instructor, developer, motivator and content creator. I love
+            educating people and creating educational materials. In January 2019, I also created a teaching material
+            <span class="days">JavaScript for Everyone.</span> In December 2019, I created <span class="days">30 Days of
+                Python</span> challenge and in January 2020 <span class="days">30 Days of JavaScript</span> challenge.
+        </p>
+
+        <div class="course"></div>
+        <p class="techs"></p>
+
+
+        <script src="activities.js"></script>
+        <script src="course.js"></script>
+        <script src="tech.js"></script>
+        <script>
+            const names = document.querySelector('.asabeneh')
+            const activityy = document.querySelector('.activity')
+            const acti = document.querySelector('.activities')
+            const coursed = document.querySelector('.course')
+            const techs = document.querySelector('.techs')
+            //styling
+            names.textContent = 'Asabeneh Yetayeh'
+            techs.innerHTML = `The technologies I teach <span id="teach"></span>`
+            let year = document.querySelector("#teach");
+            year.className = 'teach'
+            const tech = technologies.map((tech) => tech.toUpperCase())
+
+            let count = 0;
+            setInterval(e => {
+                let randomNumber = Math.floor(Math.random() * 11);
+                count = (count + randomNumber) % tech.length;
+                let newColour = tech[count];
+                year.textContent = `${newColour}`;
+            }, 1200);
+
+            setInterval(e => {
+                let randomNumber = Math.floor(Math.random() * 11);
+                count = (count + randomNumber) % activities.length;
+                let newColour = activities[count];
+                activityy.textContent = `${newColour}`;
+            }, 2000);
+
+            const backgroundColorChange = () => {
+                let random1 = Math.floor(Math.random() * 255)
+                let random2 = Math.floor(Math.random() * 255)
+                let random3 = Math.floor(Math.random() * 255)
+                color = `rgb(${random1},${random2},${random3})`
+                year.style.color = color
+            }
+            setInterval(backgroundColorChange, 2000)
+
+            courses.map((courses) => {
+                let lang = document.createElement("p");
+                lang.id = 'course-item'
+                lang.style.textTransform = 'uppercase'
+                lang.style.padding = '2.8rem 0.9rem'
+                lang.style.border = '0.1px solid rgb(240, 235, 235)'
+                lang.style.borderRadius = '5px'
+                lang.textContent = `${courses}`
+                coursed.append(lang)
+            })
+        </script>
+    </div>
+</body>
+
+</html>

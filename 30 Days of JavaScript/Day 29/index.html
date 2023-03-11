@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            margin-top: 4rem;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            height: auto;
+        }
+      
+
+        .output {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .paragraph {
+            margin-left: 1rem;
+            font-size: 5.5rem;
+            word-spacing: 1rem;
+            animation: pulse 5s infinite;
+        }
+        @media (min-width: 581px) {
+        .container {
+            width:auto;
+        }
+    }    
+    @media (max-width: 580px) {
+        .container {
+            width:auto;
+        }
+        .paragraph{
+            font-size: 2rem;
+        }
+    }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="section-div">
+            <div class="output"></div>
+    </div>
+</div>
+
+    <script>
+        const body = document.querySelector('body')
+        const section = document.querySelector('section')
+        const output = document.querySelector('.output')
+        const sectionDiv = document.querySelector('.section-div')
+
+        const text = [
+            {
+                'para': '30',
+            },
+            
+            {
+                'para': 'DAYS'
+            },
+            {
+                'para': 'OF'
+            },
+            {
+                'para': 'JAVASCRIPT'
+            },
+            {
+                'para': 'CHALLENGE'
+            },
+            {
+                'para': 2020
+            },
+            {
+                'para': 'ASABENEH'
+            },
+            {
+                'para': 'YETAYEH'
+            }
+        ]
+
+
+
+
+        function displayOutput() {
+            for (const item of text) {
+                let p = document.createElement('p')
+                p.className = 'paragraph'
+                p.innerHTML = item['para']
+
+                const chameleon = () => {
+                    let random1 = Math.floor(Math.random() * 255)
+                    let random2 = Math.floor(Math.random() * 255)
+                    let random3 = Math.floor(Math.random() * 255)
+                    let color = `rgb(${random1},${random2},${random3})`
+                    p.style.color = color;
+                    p.style.fontFamily = '"Montserrat", sans-serif'
+                }
+                setInterval(chameleon, 1000)
+                output.append(p)
+            }
+
+        }
+        displayOutput()
+
+        const chameleon_2 = () => {
+            let random1 = Math.floor(Math.random() * 255)
+            let random2 = Math.floor(Math.random() * 255)
+            let random3 = Math.floor(Math.random() * 255)
+            let color = `rgb(${random1},${random2},${random3})`
+            sectionDiv.style.backgroundColor = color
+        }
+        setInterval(chameleon_2, 1000)
+    </script>
+</body>
+
+</html>
