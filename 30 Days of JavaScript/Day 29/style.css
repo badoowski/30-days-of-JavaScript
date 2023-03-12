@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    height: auto;
+}
+
+
+.output {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.paragraph {
+    margin-left: 1rem;
+    font-size: 5.5rem;
+    word-spacing: 1rem;
+    animation: pulse 5s infinite;
+}
+@media (min-width: 581px) {
+.container {
+    width:auto;
+}
+}    
+@media (max-width: 580px) {
+.container {
+    width:auto;
+}
+.paragraph{
+    font-size: 2rem;
+}
+}

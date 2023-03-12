@@ -1,0 +1,81 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.wrapper {
+    margin: 0 8rem;
+}
+.activities{
+   align-items: center;
+}
+.asabeneh {
+    margin-top: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    font-size: 3rem;
+    text-align: left;
+    margin-left: 1rem;
+}
+.activity {
+    padding-top: 1.2rem;
+}
+
+.marquee {
+    width: auto;
+    line-height: 50px;
+    background-color: #eddfde;
+    color: Black;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.marquee p {
+    display: inline-block;
+    animation: marquee 6s linear infinite;
+
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(-100%, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.days {
+    font-weight: bold;
+}
+
+.text {
+    margin-top: 0.8rem;
+    font-weight: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    font-size: 1.05rem;
+}
+
+.course {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-around;
+
+}
+
+#course-item:hover {
+    background-color: #eddfde;
+    cursor: auto;
+}
+
+.techs {
+    margin-top: 2rem;
+
+}
+
+.teach {
+    font-size: 2rem;
+}

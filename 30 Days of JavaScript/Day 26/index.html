@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISUALIZATION COUNTRIES</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="opacity">
+            <h1>WORLD COUNTRIES LIST</h1>
+            <p id="total-countries"></p>
+            <p id="statement"></p>
+            <div class="button-div">
+                <select id="button-options" multiple>
+                    <option value="1" id="stating-word" class="button-class">STARTING WORD</option>
+                    <option value="2" id="anyword" class="button-class">SEARCH WITH ANY WORD</option>
+                    <option value="3" id="a-z" class="button-class">↓A/Z</option>
+                </select>
+            </div>
+            <div class='col'> <input type="text" class="search" placeholder="Search country..." /> <i
+                    class="fa fa-search"></i></div>
+            <div class="body-container">
+                <div class="body-div">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="countries.js"></script>
+    <script src="./script.js"> </script>
+</body>
+
+</html>

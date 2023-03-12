@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Countries Data</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="header">
+    <div>
+      <p id="title">World Countries Data</p>
+      <p class="countries-length"></p>
+    </div>
+  </div>
+  <div class="input-div">
+    <input type="text" class="search" placeholder="Search countries by name, city and languages" />
+  </div>
+  <div class="middle">
+    <button id="btn" class="btn-name">NAME</button>
+    <button id="btn" class="btn-cap">CAPITAL</button>
+    <button id="btn" class="btn-pop">POPULATION</button>
+    <button id="btn" class="btn-chart">CHART</button>
+
+  </div>
+  <div class="body-container">
+    <div class="bar-div"> </div>
+  </div>
+  <div class="middle">
+    <button class="btn-population" onclick="mostPopulated()">POPULATION</button>
+    <button class="btn-languages" onclick="mostPopularLanguages()">LANGUAGES</button>
+  </div>
+  <div>
+
+  </div>
+  <p id="ten-most"></p>
+  </div>
+  <div class="body-containerr"></div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts""></script>
+  <script src=" countries.js"></script>
+  <script src="./script.js">
+  </script>
+</body>
+
+</html>

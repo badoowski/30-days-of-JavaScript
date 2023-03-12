@@ -1,0 +1,153 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    background: linear-gradient(0deg, rgb(60, 90, 116, 0.4), rgb(60, 90, 116, 0.9)), url(./globe-2.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 25rem;
+    width: 100%;
+}
+
+.opacity {
+    opacity: 99%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 5rem;
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 8px;
+}
+
+#total-countries {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+}
+@media (min-width: 481px) {
+.body-div {
+    grid-template-columns: repeat(7, auto);
+}
+}
+
+@media (max-width: 480px) {
+.body-div {
+    grid-template-columns: repeat(2, auto);
+}
+}
+
+.search {
+    border: none;
+    border-radius: 80px;
+    padding: 0.8rem;
+    width: 25rem;
+    height: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+.fa {
+    color: aliceblue;
+    padding-top: 1rem;
+}
+
+.body-div {
+    display: inline-grid;
+    vertical-align: middle;
+    padding-left: 4rem;
+    padding-top: 6rem;
+
+}
+
+.body-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+    padding-right: 2rem;
+}
+
+.box {
+    background: linear-gradient(0deg, rgb(60, 90, 116, 0.4), rgb(60, 90, 116, 0.9)), url('./map_image.jpg');
+    background-size: 99%;
+    background-repeat: no-repeat;
+    width: auto;
+    margin-top: 2rem;
+
+}
+
+
+#stating-word:hover,
+#anyword:hover,
+#a-z:hover {
+    border: rgb(81, 20, 195) solid 0.5px;
+    width: auto;
+    height: 2rem;
+    text-align: center;
+    color: rgb(219, 219, 219);
+    background-color: rgb(81, 20, 195);
+    cursor: pointer;
+}
+
+#statement {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.fa {
+    margin-top: 1rem;
+}
+
+#button-options option {
+    width: auto;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 2rem;
+    background-color: blueviolet;
+    color: aliceblue;
+    border: none;
+    margin-left: 2px;
+    text-align: center;
+}
+
+#button-options {
+    height: 55px;
+    border: none;
+    overflow: hidden;
+    background: transparent;
+}
+
+#button-options::-moz-focus-inner {
+    border: 0;
+}
+
+#button-options:focus {
+    outline: none;
+}
+
+.button-class{
+    padding-top: 1rem;
+}

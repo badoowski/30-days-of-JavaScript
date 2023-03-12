@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.fieldContainer {
+    display: grid;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+#field {
+    border: none;
+    font-weight: bold;
+}
+
+.text-field {
+    height: 2rem;
+    border-width: thin;
+}
+
+.text-field:hover {
+    border-color: rgb(238, 26, 26);
+}
+
+#submit {
+    height: 2rem;
+    width: 7rem;
+    background-color: black;
+    border-radius: 7%;
+    color: white;
+}
+
+.error {
+    color: #f2a93b;
+    font-size: 12px;
+    text-align: center;
+    width: 25rem;
+    word-wrap: break-word;
+    margin-left: 3rem;
+}
+@media (min-width: 481px) {
+    .text-field {
+        width: 30rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .text-field {
+        width: 15rem;
+    }
+    .error{
+        width: 12.5rem;
+        margin-left: 2rem;
+    }
+}
