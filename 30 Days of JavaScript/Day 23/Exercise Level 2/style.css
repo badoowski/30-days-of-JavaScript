@@ -1,0 +1,7 @@
+.green{
+    color:rgb(139, 236, 139)
+}
+.containerDiv{
+    display: flex;
+    justify-content: center;
+}

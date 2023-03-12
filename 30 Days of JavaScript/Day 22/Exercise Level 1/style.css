@@ -1,0 +1,15 @@
+.div{
+    grid-template-columns: repeat(6, auto);
+}
+
+@media (min-width: 481px) {
+    .div {
+        grid-template-columns: repeat(6, auto);
+    }
+    }
+    
+    @media (max-width: 480px) {
+    .div {
+        grid-template-columns: repeat(2, auto);
+    }
+    }
