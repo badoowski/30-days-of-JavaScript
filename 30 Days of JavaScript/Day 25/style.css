@@ -1,0 +1,71 @@
+.header {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  .bar-div {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    align-items: center;
+    height: 21rem;
+  }
+
+  #title {
+    color: #f2a93b;
+    font-size: 2rem;
+  }
+
+  .countries-length {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .middle {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+
+  }
+
+  .btn-population {
+    height: 2rem;
+    width: 10rem;
+    margin-right: 1rem;
+    background-color: #f2a93b;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  #ten-most {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+
+  .btn-languages {
+    height: 2rem;
+    width: 10rem;
+    margin-left: 1rem;
+    background-color: #f2a93b;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+  }
+
+  #most-populated {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+
+  .btn-languages-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
